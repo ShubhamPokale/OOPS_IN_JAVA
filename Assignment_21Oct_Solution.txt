@@ -1,0 +1,179 @@
+1. What is the initial capacity of the following string buffer?
+StringBuffer sb = new StringBuffer("Able was I ere I saw Elba.");
+
+2. Consider the following string:
+String hannah = "Did Hannah see bees? Hannah did.";
+What is the value displayed by the expression hannah.length()?
+What is the value returned by the method call hannah.charAt(12)?
+Write an expression that refers to the letter b in the string referred to by hannah.
+
+3. Write a Java program to get the last index of a string within a string.
+
+Sample string of all alphabet: "The quick brown fox jumps over the lazy dog."
+Note: use str.lastIndexOf method for the same e.g. str.lastIndexOf("a", str.length() - 1);
+
+Sample Output:
+
+ a  b c  d  e  f  g  h i  j                                                                                   
+===========================                                                                                   
+36 10 7 40 33 16 42 32 6 20                                                                                   
+                                                                                                              
+k  l  m  n  o  p q  r  s  t                                                                                   
+===========================                                                                                   
+8 35 22 14 41 23 4 29 24 31                                                                                   
+                                                                                                              
+ u  v  w  x  y  z                                                                                             
+=================                                                                                             
+21 27 13 18 38 37
+
+=======================================================================================================
+4. Write a Java program to replace a specified character with another character.
+
+Sample Output:
+Original string: The quick brown fox jumps over the lazy dog.                                                 
+New String: The quick brown fox jumps over the lazy fog.
+========================================================================================================
+5. Write a Java program to find all interleavings of given strings.
+
+Solution:
+import java.util.HashSet;
+import java.util.Set;
+
+class Main {
+ public static void allInterleavings(String res, String P, String Q, Set < String > out) {
+  if (P.length() == 0 && Q.length() == 0) {
+   out.add(res);
+   return;
+  }
+  if (P.length() > 0) {
+   allInterleavings(res + P.charAt(0), P.substring(1), Q, out);
+  }
+  if (Q.length() > 0) {
+   allInterleavings(res + Q.charAt(0), P, Q.substring(1), out);
+  }
+ }
+
+ public static void main(String[] args) {
+  String P = "WX";
+  String Q = "YZ";
+  System.out.println("The given strings are: " + P + "  " + Q);
+  System.out.println("The interleavings strings are: ");
+  Set < String > out = new HashSet < > ();
+  allInterleavings("", P, Q, out);
+
+  out.stream().forEach(System.out::println);
+ }
+}
+
+Sample Output:
+
+The given strings are: WX  YZ
+The interleavings strings are: 
+YWZX
+WYZX
+YWXZ
+WXYZ
+YZWX
+WYXZ
+================================================================================================
+6. Write a Java program to find the first non-repeating character in a string.
+
+import java.util.*;
+public class Main {
+ public static void main(String[] args) {
+  String str1 = "gibblegabbler";
+  System.out.println("The given string is: " + str1);
+  for (int i = 0; i < str1.length(); i++) {
+   boolean unique = true;
+   for (int j = 0; j < str1.length(); j++) {
+    if (i != j && str1.charAt(i) == str1.charAt(j)) {
+     unique = false;
+     break;
+    }
+   }
+   if (unique) {
+    System.out.println("The first non repeated character in String is: " + str1.charAt(i));
+    break;
+   }
+  }
+ }
+}
+
+Sample Output:
+
+The given string is: gibblegabbler
+The first non repeated character in String is: i
+=========================================================================================================
+7. Write a Java program to divide a string into n equal parts.
+
+Note: write your logic in method splitString(str,int)
+
+import java.util.*;
+class Main {
+ static void splitString(String str1, int n) {
+  int str_size = str1.length();
+  int part_size;
+  if (str_size % n != 0) {
+   System.out.println("The size of the given string is not divisible by " + n);
+   return;
+  } else {
+   System.out.println("The given string is: " + str1);
+   System.out.println("The string divided into " + n + " parts and they are: ");
+   part_size = str_size / n;
+   for (int i = 0; i < str_size; i++) {
+    if (i % part_size == 0) System.out.println();
+    System.out.print(str1.charAt(i));
+   }
+  }
+ }
+ public static void main(String[] args) {
+  String str1 = "abcdefghijklmnopqrstuvwxy";
+  int split_number = 5;
+  splitString(str1, split_number);
+ }
+}
+
+Sample Output:
+
+The given string is: abcdefghijklmnopqrstuvwxy
+The string divided into 5 parts and they are: 
+
+abcde
+fghij
+klmno
+pqrst
+uvwxy
+===================================================================================================
+8. Write a Java program to reverse a string using recursion.
+
+Sample Solution:
+
+Java Code:
+
+import java.util.*;
+class Main {
+ void reverseString(String str1) {
+  if ((str1 == null) || (str1.length() <= 1))
+   System.out.println(str1);
+  else {
+   System.out.print(str1.charAt(str1.length() - 1));
+   reverseString(str1.substring(0, str1.length() - 1));
+  }
+ }
+ public static void main(String[] args) {
+  String str1 = "The quick brown fox jumps";
+  System.out.println("The given string is: " + str1);
+  System.out.println("The string in reverse order is:");
+  Main obj = new Main();
+  obj.reverseString(str1);
+ }
+}
+
+Sample Output:
+
+The given string is: The quick brown fox jumps
+The string in reverse order is:
+spmuj xof nworb kciuq ehT
+Flowchart:
+
+==========================================================================================================
