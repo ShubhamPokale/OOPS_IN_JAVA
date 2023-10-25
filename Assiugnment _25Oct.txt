@@ -1,5 +1,24 @@
 1. Write a java program to find whether arrayList is empty or not.
+
+         CollectionMethods.isArrayListEmpty(c2);
+         CollectionMethods.isArrayListEmpty(c);
+
+static void isArrayListEmpty(Collection<Integer> c)
+        {
+            Iterator<Integer> it = c.iterator();
+            if(it.hasNext())
+                {
+                    System.out.println("The ArrayList is not empty");
+                }
+            else {
+                System.out.println("The ArrayList is empty ");
+            }
+
+        }
+
+
 2. Write a java program to find whether LinkedList is empty or not.
+
 3. write a java program to find size og array and linked list.
 4. Write a java program to reverse arrayList.
 5. Write a java program to add elements in arraylist and print all elements in array list using for each loop.
