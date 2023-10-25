@@ -83,7 +83,17 @@ static int addElements(Collection<Integer> c)
  
 6. Write a java program to add 13,12,18,40, write a logic to remove only odd elements from the list and print only even numbers.
    Sample Output:[18,20]
+    static void removeOdd(Collection<Integer> c) {         // 10 20 30
+        Iterator<Integer> it = c.iterator();
+        while (it.hasNext()) {
+            int x = (Integer) it.next();
+            if (x % 2 == 1) {
+                it.remove();
+            }
 
+        }
+
+    }
 
 
 7. Write a java program to add numbers in an array list and linked list sort the elements in both.
