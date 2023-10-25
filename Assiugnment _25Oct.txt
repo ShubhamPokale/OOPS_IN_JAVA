@@ -97,4 +97,6 @@ static int addElements(Collection<Integer> c)
 
 
 7. Write a java program to add numbers in an array list and linked list sort the elements in both.
+         
+
 8. Create a class Person with fields name, age, address, phone number. print object person using array list and linked list.
