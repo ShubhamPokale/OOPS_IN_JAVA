@@ -62,9 +62,29 @@ Collection<Integer> c3 = new LinkedList<Integer>();
 
         }
 5. Write a java program to add elements in arraylist and print all elements in array list using for each loop.
-         
+          
+static int addElements(Collection<Integer> c)
+            {   int res = 0 ;
+                Iterator<Integer> it = c.iterator();
+                while(it.hasNext())
+                    {
+                        res = res + it.next();
+                    }
+                return res;
+            }
 
+  static void displayCollections(Collection<Integer> c)
+    {
+        for (Integer integer : c) {
+            System.out.print(integer + " ");
+
+        }
+    }
+ 
 6. Write a java program to add 13,12,18,40, write a logic to remove only odd elements from the list and print only even numbers.
    Sample Output:[18,20]
+
+
+
 7. Write a java program to add numbers in an array list and linked list sort the elements in both.
 8. Create a class Person with fields name, age, address, phone number. print object person using array list and linked list.
