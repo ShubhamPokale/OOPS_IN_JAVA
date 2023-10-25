@@ -1,5 +1,5 @@
 1. Write a java program to find whether arrayList is empty or not.
-2. Write a java program to find whether arrayList is empty or not.
+2. Write a java program to find whether LinkedList is empty or not.
 3. write a java program to find size og array and linked list.
 4. Write a java program to reverse arrayList.
 5. Write a java program to add elements in arraylist and print all elements in array list using for each loop.
