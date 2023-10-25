@@ -1,0 +1,9 @@
+1. Write a java program to find whether arrayList is empty or not.
+2. Write a java program to find whether arrayList is empty or not.
+3. write a java program to find size og array and linked list.
+4. Write a java program to reverse arrayList.
+5. Write a java program to add elements in arraylist and print all elements in array list using for each loop.
+6. Write a java program to add 13,12,18,40, write a logic to remove only odd elements from the list and print only even numbers.
+   Sample Output:[18,20]
+7. Write a java program to add numbers in an array list and linked list sort the elements in both.
+8. Create a class Person with fields name, age, address, phone number. print object person using array list and linked list.
