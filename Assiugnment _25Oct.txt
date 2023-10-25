@@ -43,10 +43,27 @@ Collection<Integer> c3 = new LinkedList<Integer>();
 
 
 
-3. write a java program to find size of array and linked list.
-
+3. write a java program to find size of array and linked list. // Can also do this using iterator 
+          System.out.println( "The size of the c3 ArrayList is " + c3.size());
+                 c3.add(100);
+         System.out.println( "The size of the c3 ArrayList is " + c3.size());
 4. Write a java program to reverse arrayList.
+             static ArrayList<Integer> reverseArrayList(ArrayList<Integer> c)
+        {   // Create a new empty ArrayList named revList to append the elements
+            ArrayList<Integer> revList = new ArrayList<>();
+            for (int i = c.size() - 1; i >= 0; i--) {
+
+                // Append the elements in reverse order
+                revList.add(c.get(i));
+            }
+
+            // Return the reversed arraylist
+            return revList;
+
+        }
 5. Write a java program to add elements in arraylist and print all elements in array list using for each loop.
+         
+
 6. Write a java program to add 13,12,18,40, write a logic to remove only odd elements from the list and print only even numbers.
    Sample Output:[18,20]
 7. Write a java program to add numbers in an array list and linked list sort the elements in both.
