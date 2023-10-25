@@ -18,8 +18,33 @@ static void isArrayListEmpty(Collection<Integer> c)
 
 
 2. Write a java program to find whether LinkedList is empty or not.
+psvm {
+Collection<Integer> c3 = new LinkedList<Integer>();
+        CollectionMethods.isListEmpty(c3);
+        c3.add(20);
+        c3.add(10);
+        c3.add(50);
+        CollectionMethods.isListEmpty(c3);
+}
 
-3. write a java program to find size og array and linked list.
+
+ static void isListEmpty(Collection<Integer> c)
+    {
+        Iterator<Integer> it = c.iterator();
+        if(it.hasNext())
+        {
+            System.out.println("The List is not empty");
+        }
+        else {
+            System.out.println("The List is empty ");
+        }
+
+    }
+
+
+
+3. write a java program to find size of array and linked list.
+
 4. Write a java program to reverse arrayList.
 5. Write a java program to add elements in arraylist and print all elements in array list using for each loop.
 6. Write a java program to add 13,12,18,40, write a logic to remove only odd elements from the list and print only even numbers.
